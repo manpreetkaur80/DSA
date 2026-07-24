@@ -12,16 +12,16 @@ public class sudoku {
                     {
                         continue;
                     }
-                    if(mat[i][val]==1)
+                    if(rows[i][val]==1)
                     {
                         return false;
                     }
-                    mat[i][val]=1;
-                    if(mat[j][val]==1)
+                    rows[i][val]=1;
+                    if(cols[j][val]==1)
                     {
                         return false;
                     }
-                    mat[j][val]=1;
+                    cols[j][val]=1;
                     int index=(i/3)*3+(j/3);
                     if(box[index][val]==1)
                     {
@@ -36,18 +36,16 @@ public class sudoku {
             return true;
     }
     public static void main(String[] args) {
-        int[][] mat={
-            {5,3,0,0,7,0,0,0,0},
-            {6,0,0,1,9,5,0,0,0},
-            {0,9,8,0,0,0,0,6,0},
-            {8,0,0,0,6,0,0,0,3},
-            {4,0,0,8,0,3,0,0,1},
-            {7,0,0,0,2,0,0,0,6},
-            {0,6,0,0,0,0,2,8,0},
-            {0,0,0,4,1,9 , 5 ,  9 ,  9 },
-            {
-    }
-        };
+      int[][] mat = { { 5, 3, 0, 0, 7, 0, 0, 0, 0 },
+                        { 6, 0, 0, 1, 9, 5, 0, 0, 0 },
+                        { 0, 9, 8, 0, 0, 0, 0, 6, 0 },
+                        { 8, 0, 0, 0, 6, 0, 0, 0, 3 },
+                        { 4, 0, 0, 8, 0, 3, 0, 0, 1 },
+                        { 7, 0, 0, 0, 2, 0, 0, 0, 6 },
+                        { 0, 6, 0, 0, 0, 0, 2, 8, 0 },
+                        { 0, 0, 0, 4, 1, 9, 0, 0, 5 },
+                        { 0, 0, 0, 0, 8, 0, 0, 7, 9 } };
+        
         if(isvalid(mat))
         {
             System.out.println("Valid");
