@@ -5,7 +5,7 @@ class fibonacciSearch {
         int n=arr.length;
         int target=60;
         int fib1=0 , fib2=1 , fib3;
-        
+     
         do
             {
                 fib3=fib1+fib2;
