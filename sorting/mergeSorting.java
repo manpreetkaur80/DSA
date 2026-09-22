@@ -17,9 +17,7 @@ class mergeSorting {
             merge(arr, low, mid, high);
         }
     }
-
     static void merge(int arr[],int low , int mid , int high)
-
         {
                 int   i = low;
                 int j = mid + 1;
