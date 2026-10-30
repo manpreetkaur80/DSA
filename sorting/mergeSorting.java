@@ -5,10 +5,8 @@ class mergeSorting {
         mergeSort(arr, 0, n - 1);
             for (int i = 0; i < n; i++) {
             System.out.println(arr[i]);
-        }
-       
+        }   
     }
-
     static void mergeSort(int arr[], int low, int high) {
         if (low < high) {
             int mid = (low + high) / 2;
@@ -57,3 +55,10 @@ class mergeSorting {
                 }
         }
 }
+
+
+
+
+
+
+
