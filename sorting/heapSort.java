@@ -24,6 +24,13 @@ class heapSort {
             }
         
         // Step 2: Extract elements one by one
+        for (int i=n-1 ; i>0 ; i-- )
+        {
+            int temp=arr[0];
+            arr[0]=arr[i];
+            arr[i]=temp;
+            heapify(arr, n-i, i);
+        }
     }
 
     static void heapify(int arr[], int n, int i) {
@@ -35,10 +42,12 @@ class heapSort {
         {
             largest=leftChild;
         }
-        if(rightChild<n && arr[rightChild]>arr[i])
+        if(rightChild<n && arr[rightChild]>arr[largest])
         {
             largest=rightChild;
         }
+        // in above two conditions we just check wether the route element is smaller than left or right , 
+
         if(largest!=i)
         {
             int temp=arr[largest];
@@ -46,6 +55,6 @@ class heapSort {
             arr[i]=temp;
             heapify(arr,n,largest);
         }
-
+        //in above condition we check adter finding the largest we swap the route with largest element if the condition is true, and again calling the heapify bcz if the next heap is maxx or not
     }
 }
