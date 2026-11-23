@@ -12,9 +12,8 @@ public class ThreewayMergeSort {
     static void mergeSort(int arr[], int low, int high) {
 
         if (low >= high) {
-            return;
-        }
-
+            return;}
+            
         int mid1 = low + (high - low) / 3;
         int mid2 = low + 2 * (high - low) / 3 + 1;
 
