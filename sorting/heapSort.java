@@ -15,22 +15,24 @@ class heapSort {
 
     static void heapSorting(int arr[]) {
 
-        // Step 1: Build Max Heap
-    
+                // in this step I am building max heapp , step 1 in our dry run
             int n=arr.length;
             for(int i=n/2-1;i>=0;i--)
             {
                 heapify(arr,n,i);
             }
         
-        // Step 2: Extract elements one by one
+        // Extract elements one by one , step 2 , 2.1 2.2 , 2.3 in for loop 
         for (int i=n-1 ; i>0 ; i-- )
         {
             int temp=arr[0];
             arr[0]=arr[i];
             arr[i]=temp;
-            heapify(arr, n-i, i);
+            heapify(arr, i,0);
         }
+
+        // oky here i at n bcz we need too reduce the size of hepify arr , we are not going to include the last element , and i is the decreasing element here
+        // here 0 in place of i bcz we need to start the heapify from the firt position , and i in the heapify function doing the same , indicates the starting point of heapify
     }
 
     static void heapify(int arr[], int n, int i) {
